@@ -1,10 +1,12 @@
 <p style="color: green"><%= notice %></p>
+<div class="personpage">
+  <br>
+  <%= render @person %>
 
-<%= render @person %>
+  <div class="edit">
+    <%= link_to "Edit", edit_person_path(@person) %>
+    <%= link_to "Main Page", people_path %>
 
-<div>
-  <%= link_to "Edit this person", edit_person_path(@person) %> |
-  <%= link_to "Back to people", people_path %>
-
-  <%= button_to "Destroy this person", @person, method: :delete %>
+    <%#= button_to "Destroy this person", @person, method: :delete %>
+  </div>
 </div>

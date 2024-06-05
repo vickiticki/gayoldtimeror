@@ -11,29 +11,29 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="answers">
+    <p class="label"><%= form.label :name %>:</p>
+    <%= form.text_field :name, class: "oneline" %>
   </div>
 
-  <div>
-    <%= form.label :birthday, style: "display: block" %>
-    <%= form.text_field :birthday %>
+  <div class="answers">
+    <p class="label"><%= form.label :birthday %>:</p>
+    <%= form.text_field :birthday, class: "oneline" %>
   </div>
 
-  <div>
-    <%= form.label :birthYear, style: "display: block" %>
-    <%= form.number_field :birthYear %>
+  <div class="answers">
+    <p class="label"><%= form.label :birthYear %>:</p>
+    <%= form.number_field :birthYear, class: "oneline" %>
   </div>
 
-  <div>
-    <%= form.label :death, style: "display: block" %>
-    <%= form.text_field :death %>
+  <div class="answers">
+    <p class="label"><%= form.label :death %>:</p>
+    <%= form.text_field :death, class: "oneline" %>
   </div>
 
-  <div>
-    <%= form.label :biography, style: "display: block" %>
-    <%= form.text_area :biography %>
+  <div class="answers">
+    <p class="label"><%= form.label :biography%>:</p>
+    <%= form.text_area :biography, class: "story" %>
   </div>
 
   <div>
