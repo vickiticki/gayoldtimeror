@@ -1,29 +1,28 @@
 
+<div class="all">
+  <div class="roy">
+    <div class="red stripe"></div>
+    <div class="orange stripe"></div>
+    <div class="yellow stripe"></div>
+  </div>
+  <%#= render "people", people: @people %>
+  <main>
 <h1 class="title">Gay Old Time</h1>
 <p class="subtitle">LGBT+ Historical Figures</p>
 
 <div class="subtitle">
   <h3>Sort by:</h3>
-  <button>Name</button><button>Year</button>
+  <button>Year
 </div>
-<div class="all">
-  <%#= render "people", people: @people %>
-  <main>
-    <div id="people">
-      <ul>
-        <% @alphabetical_people.each do |person| %>
-          <li>
-            <p>
-              <%= link_to person.name, person %>
-            </p>
-            <p> <%= person.birthYear %></p>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </main>
-
-</div>
+    <%= render "people", people: @alphabetical_people%>
 <span class="make">
   <%= link_to "New person", new_person_path %>
 </span>
+  </main>
+  <div class="gbp">
+    <div class="green stripe"></div>
+    <div class="blue stripe"></div>
+    <div class="purple stripe"></div>
+  </div>
+
+</div>

@@ -1,8 +1,12 @@
 <div id="people">
-  <% people.each do |person| %>
-    <p>
-      <%= link_to person.name, person %>
-    </p>
-    <p> <%= person.birthYear %></p>
-  <% end %>
+  <ul>
+    <% people.each do |person| %>
+      <li>
+        <p>
+          <%= link_to person.name, person %>
+        </p>
+        <p> <%= person.birthYear %></p>
+      </li>
+    <% end %>
+  </ul>
 </div>

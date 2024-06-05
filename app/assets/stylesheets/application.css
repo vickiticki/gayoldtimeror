@@ -135,13 +135,19 @@ main {
   }
 }
 
+.all {
+  height: 100%;
+}
+
 @media all and (max-width: 549px) {
 }
 @media all and (min-width: 550px) {
   main {
+    width: 100%;
     ul {
       display: flex;
       flex-wrap: wrap;
+      /* width: 600px; */
 
       li {
         width: 50%;
@@ -181,6 +187,25 @@ main {
     .purple {
       background-color: purple;
       width: 30px;
+    }
+  }
+}
+
+@media all and (min-width: 800px) {
+  main ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 32%;
+    }
+  }
+}
+@media all and (min-width: 1250px) {
+  main ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 25%;
     }
   }
 }
