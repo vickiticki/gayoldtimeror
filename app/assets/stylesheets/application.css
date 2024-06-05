@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  font: 16px / 1 sans-serif;
+  background-color: #9cd7da;
+  color: #185691;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 0.5rem;
+  font-family: fantasy;
+  font-weight: 1000;
+}
