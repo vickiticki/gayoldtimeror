@@ -18,6 +18,68 @@
   font: 16px / 1 sans-serif;
   background-color: #9cd7da;
   color: #185691;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Kalam", cursive;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  position: fixed;
+
+  border-bottom: solid 1px black;
+  background-color: #23b0b8;
+  color: #0a3f70;
+  .left {
+    font-size: 26px;
+  }
+  ul {
+    list-style: none;
+  }
+
+  a:visited,
+  a:link {
+    color: #0a3f70;
+    text-decoration: none;
+  }
+  .middle {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .right {
+    font-size: 18px;
+  }
+
+  .signup {
+    padding-top: 3px;
+    margin-top: 3px;
+    border-top: rgba(250, 75, 14, 0.838) solid 2px;
+  }
+}
+
+footer {
+  text-align: center;
+  border-top: solid 1px black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+  background-color: #23b0b8;
+  color: #0a3f70;
+  font-family: "Kalam", cursive;
+  font-size: 16px;
 }
 
 h1 {
@@ -26,4 +88,103 @@ h1 {
   padding-top: 0.5rem;
   font-family: fantasy;
   font-weight: 1000;
+}
+
+button {
+  background-color: #43a4b9;
+  color: #3a1605;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px;
+  border-radius: 8px;
+  a:visited,
+  a:link {
+    text-decoration: none;
+    color: #3a1605;
+  }
+}
+.all {
+  display: flex;
+  width: 100vw;
+  min-height: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+body {
+  margin-top: 8rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+}
+
+main {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 100%;
+    }
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 549px) {
+}
+@media all and (min-width: 550px) {
+  main {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 50%;
+      }
+    }
+  }
+  .roy {
+    display: flex;
+    justify-content: initial;
+    .stripe {
+      width: 30px;
+    }
+    .red {
+      background-color: red;
+    }
+    .orange {
+      background-color: orange;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+  }
+  .gbp {
+    display: flex;
+    justify-content: right;
+    /* height: 100%; */
+    align-self: stretch;
+
+    .green {
+      background-color: green;
+      width: 30px;
+    }
+    .blue {
+      background-color: blue;
+      width: 30px;
+    }
+    .purple {
+      background-color: purple;
+      width: 30px;
+    }
+  }
+}
+
+.make {
+  text-align: center;
 }

@@ -1,33 +1,29 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Gay Old Time</h1>
+<h1 class="title">Gay Old Time</h1>
+<p class="subtitle">LGBT+ Historical Figures</p>
 
-<div>
+<div class="subtitle">
   <h3>Sort by:</h3>
   <button>Name</button><button>Year</button>
 </div>
+<div class="all">
+  <%#= render "people", people: @people %>
+  <main>
+    <div id="people">
+      <ul>
+        <% @alphabetical_people.each do |person| %>
+          <li>
+            <p>
+              <%= link_to person.name, person %>
+            </p>
+            <p> <%= person.birthYear %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </main>
 
-<%#= render "people", people: @people %>
-
-<% if @alphabetical === true %>
-<div id="people">
-  <% @alphabetical_people.each do |person| %>
-    <p>
-      <%= link_to person.name, person %>
-    </p>
-    <p> <%= person.birthYear %></p>
-  <% end %>
 </div>
-
-<% else %>
-
-<div>
-  <% @chronological_people.each do |person| %>
-    <p> <%= link_to person.name, person %> </p>
-    <p> <%= person.birthYear %> </p>
-  <% end %>
-</div>
-<% end %>
-
-
-<%= link_to "New person", new_person_path %>
+<span class="make">
+  <%= link_to "New person", new_person_path %>
+</span>
