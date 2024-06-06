@@ -5,8 +5,11 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
     @alphabetical_people = @people.sort_by { |person| person.name }
-    @chronological_people = @people.sort_by { |person| person.birthYear }
     @alphabetical = true
+    end
+    
+  def year
+    @chronological_people = Person.all.sort_by { |person| person.birthYear }
   end
 
   # GET /people/1 or /people/1.json

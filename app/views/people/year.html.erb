@@ -11,12 +11,12 @@
 <p class="subtitle">LGBT+ Historical Figures</p>
 
 <div class="subtitle">
-  <button><%= link_to "Sort by Year", year_people_path %> </button>
+  <button><%= link_to "Sort by Name", people_path%></button>
 </div>
-    <%= render "people", people: @alphabetical_people%>
-<button class="make">
-  <%= link_to "New person", new_person_path, style: "center" %>
-</button>
+    <%= render "people", people: @chronological_people%>
+<span class="make">
+  <%= link_to "New person", new_person_path %>
+</span>
   </main>
   <div class="gbp">
     <div class="green stripe"></div>
