@@ -4,8 +4,8 @@
   <%= render @person %>
 
   <div class="edit">
-    <%= link_to "Edit", edit_person_path(@person) %>
-    <%= link_to "Main Page", people_path %>
+    <p><%= link_to "Edit", edit_person_path(@person) %></p>
+    <p><%= link_to "Main Page", people_path %></p>
 
     <%#= button_to "Destroy this person", @person, method: :delete %>
   </div>
