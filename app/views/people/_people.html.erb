@@ -5,7 +5,7 @@
         <p>
           <%= link_to person.name, person %>
         </p>
-        <p> <%= person.birthYear %></p>
+        <p> <%= person.birthYear %> <% if person.bce === true %>BCE<% end %></p>
       </li>
     <% end %>
   </ul>

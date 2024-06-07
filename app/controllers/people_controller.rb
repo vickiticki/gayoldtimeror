@@ -5,11 +5,14 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
     @alphabetical_people = @people.sort_by { |person| person.name }
-    @alphabetical = true
     end
     
   def year
-    @chronological_people = Person.all.sort_by { |person| person.birthYear }
+    @people = Person.all
+    bce_people = @people.select { |person| person.bce === true }.sort_by { |person| -person.birthYear }
+    ce_people = @people.select { |person| person.bce != true}.sort_by{ |person| person.birthYear}
+
+    @chronological_people = bce_people + ce_people
   end
 
   # GET /people/1 or /people/1.json
@@ -71,6 +74,6 @@ class PeopleController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def person_params
-      params.require(:person).permit(:name, :birthday, :birthYear, :death, :biography)
+      params.require(:person).permit(:name, :birthday, :birthYear, :death, :biography, :country, :bce)
     end
 end

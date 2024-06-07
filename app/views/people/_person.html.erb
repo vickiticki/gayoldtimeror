@@ -2,8 +2,14 @@
   <h1><%= person.name %></h1>
 
   <p>
+    <strong>Country:</strong>
+    <%= person.country %>
+  </p>
+
+  <p>
     <strong>Birth:</strong>
     <%= person.birthday %>/<%= person.birthYear%>
+    <% if person.bce == true %> BCE <% end %>
   </p>
 
   <p>

@@ -7,16 +7,19 @@
   </div>
   <%#= render "people", people: @people %>
   <main>
-<h1 class="title">Gay Old Time</h1>
-<p class="subtitle">LGBT+ Historical Figures</p>
+    <h1 class="title">Gay Old Time</h1>
+    <p class="subtitle">LGBT+ Historical Figures</p>
 
-<div class="subtitle">
-  <button><%= link_to "Sort by Year", year_people_path %> </button>
-</div>
+    <div class="subtitle">
+      <button><%= link_to "Sort by Year", year_people_path %> </button>
+    </div>
     <%= render "people", people: @alphabetical_people%>
-<button class="make">
-  <%= link_to "Add Person", new_person_path, style: "center" %>
-</button>
+
+    <div class="fullwidth">
+      <button class="make">
+        <%= link_to "Add Person", new_person_path %>
+      </button>
+    </div>
   </main>
   <div class="gbp">
     <div class="green stripe"></div>

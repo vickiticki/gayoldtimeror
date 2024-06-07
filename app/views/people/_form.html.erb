@@ -17,6 +17,11 @@
   </div>
 
   <div class="answers">
+    <p class="label"><%= form.label :country %>:</p>
+    <%= form.text_field :country, class: "oneline" %>
+  </div>
+
+  <div class="answers">
     <p class="label"><%= form.label :birthday %>:</p>
     <%= form.text_field :birthday, class: "oneline" %>
   </div>
@@ -24,6 +29,8 @@
   <div class="answers">
     <p class="label"><%= form.label :birthYear %>:</p>
     <%= form.number_field :birthYear, class: "oneline" %>
+    <p class="label"><%= form.label :bce? %>:</p>
+    <%= form.check_box :bce, class: "oneline" %>
   </div>
 
   <div class="answers">

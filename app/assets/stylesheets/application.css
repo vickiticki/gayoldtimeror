@@ -221,6 +221,11 @@ main {
   margin: 1rem;
 }
 
+.fullwidth {
+  width: 100%;
+  display: flex;
+}
+
 .make {
   text-align: center;
   justify-items: center;
